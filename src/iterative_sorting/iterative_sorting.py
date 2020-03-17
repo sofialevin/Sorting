@@ -16,20 +16,18 @@ def selection_sort( arr ):
     return arr
 
 
-my_list = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-
-print(selection_sort(my_list))
-
 # # TO-DO:  implement the Bubble Sort function below
-# def bubble_sort( arr ):
-#     for i in arr:
-#         if i > i + 1:
-
-
-
-
-#     return arr
-
+def bubble_sort( arr ):
+    swaps = 0
+    prevswaps = None
+    while swaps != prevswaps:
+        prevswaps = swaps
+        for i in range(0, len(arr) - 1):
+            if i < len(arr) - 1 and arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                swaps += 1
+     
+    return arr
 
 # # STRETCH: implement the Count Sort function below
 # def count_sort( arr, maximum=-1 ):
